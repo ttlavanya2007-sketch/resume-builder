@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 to Shipped | Resume Parser</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+        <span class="logo-icon">🚀</span>
+        <div><h2>0 to Shipped</h2><p>Resume Parser</p></div>
+    </a>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#features">Features</a>
+        <a href="#upload">Try Now</a>
+    </nav>
+    <a href="#upload" class="nav-button">Try for Free ↗</a>
+</header>
+
+<main>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="badge">🚀 From PDF to Insights</span>
+        <h1>0 to Shipped<br><span>Resume Parser</span></h1>
+        <p class="hero-description">Upload your resume and get instant insights — see your score, the skills we detected, and the skills you're missing for your dream job.</p>
+        <div class="features-row" id="features">
+            <div class="feature"><div class="feature-icon">⚡</div><div><h4>Instant Analysis</h4><p>Quick demo results</p></div></div>
+            <div class="feature"><div class="feature-icon">▥</div><div><h4>Skill Match</h4><p>See what you need</p></div></div>
+            <div class="feature"><div class="feature-icon">♧</div><div><h4>No Sign Up</h4><p>Just upload and go</p></div></div>
+        </div>
+    </div>
+
+    <div class="upload-card" id="upload">
+        <div class="upload-area" id="dropArea">
+            <input type="file" id="pdfInput" accept=".pdf,application/pdf" hidden>
+            <div class="upload-icon">📄</div>
+            <h3>Upload Your Resume (PDF)</h3>
+            <p>Drag and drop your PDF here or click to browse</p>
+            <small>Supports PDF files only</small>
+            <button class="upload-button" id="chooseButton">⇧ Choose PDF</button>
+            <p id="fileName" class="file-name"></p>
+        </div>
+        <p class="privacy">🔒 Your file stays in your browser for this demo.</p>
+        <button id="analyzeButton" class="analyze-button" disabled>Analyze Resume ✨</button>
+        <p class="demo-note">Mock design · No backend required</p>
+    </div>
+</section>
+
+<section class="results-section" id="how-it-works">
+    <div class="results-heading">
+        <div><h2>Sample <span>Result</span></h2><p>Here's how your resume analysis will look.</p></div>
+        <div class="demo-warning">⚠ This is a mock design. Results are for demo only.</div>
+    </div>
+    <div class="results-grid">
+        <div class="result-card score-card">
+            <h3>🎯 Resume Match Score</h3>
+            <div class="score-circle" id="scoreCircle"><div class="score-inner"><strong id="scoreValue">78%</strong></div></div>
+            <h3 id="scoreLabel">Good Match!</h3>
+            <p id="scoreDescription">Your resume matches 78% of the required skills.</p>
+        </div>
+        <div class="result-card">
+            <h3><span class="status-icon green">✓</span> Skills Found in Resume</h3>
+            <div class="skills-list" id="foundSkills">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Python</span><span>SQL</span><span>Git</span><span>Problem Solving</span><span>Communication</span>
+            </div>
+        </div>
+        <div class="result-card">
+            <h3><span class="status-icon pink">↗</span> Missing / Suggested Skills</h3>
+            <div class="skills-list missing-skills" id="missingSkills">
+                <span>Node.js</span><span>TypeScript</span><span>Next.js</span><span>Cloud (AWS)</span><span>Docker</span><span>CI/CD</span><span>System Design</span><span>REST APIs</span>
+            </div>
+        </div>
+    </div>
+    <p class="bottom-note">✨ Your next opportunity starts with knowing your strengths.</p>
+</section>
+</main>
+<footer><p>Made with 💜 by 0 to Shipped · Resume Parser</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
